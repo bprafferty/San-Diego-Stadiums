@@ -1,0 +1,16 @@
+create or replace PROCEDURE load_file2 (indx NUMBER,pfname VARCHAR2,iname VARCHAR2,ilat NUMBER,ilon NUMBER) 
+IS
+    l_size number;
+    l_file_ptr bfile;
+    l_blob blob;
+begin
+    l_file_ptr:= bfilename('images',pfname);
+    dbms_lob.fileopen(l_file_ptr);
+    l_size:= dbms_lob.getlength(l_file_ptr);
+    insert into stadiums2019(id,image,name,lat,lon)
+        values (indx,empty_blob(),iname,ilat,ilon)
+        return image into l_blob;
+    dbms_lob.loadfromfile(l_blob, l_file_ptr, l_size);
+    commit;
+    dbms_lob.close(l_file_ptr);
+end;
