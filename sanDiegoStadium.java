@@ -115,7 +115,7 @@ public class sanDiegoStadium extends JFrame{
   public sanDiegoStadium() {
 	
 
-    super("Toyata Dealers");
+    super("San Diego Stadiums");
 	this.lightningOn = false;
     this.setSize(600,450);
     zptb.setMap(map);
@@ -195,13 +195,13 @@ public class sanDiegoStadium extends JFrame{
 		if(arg == "About sanDiegoStadium") {
          try {
 	        String s = "About sanDiegoStadium: \n"+
-			"The goal of this sanDiegoStadium is to show a map with various options of Toyota dealers in and near San Diego county periphery. \n"+
-			"The program is capable of locating geographical location (defined by two coordinates, longitude and latitude) of Toyota dealers. \n"+
+			"The goal of this code is to show a map with various options of sports stadiums in and near San Diego county periphery. \n"+
+			"The program is capable of locating geographical location (defined by two coordinates, longitude and latitude) of stadiums. \n"+
 			"It will be point layer with hotlink tool\n\n\n"+
 			"The program will display the following details:\n"+
-			"Pictures of the Toyota Dealers\n"+
-			"Website link \n"+
-			"Service Department details\n"+
+      "Names of the stadiums\n"+
+			"Pictures of the stadiums\n"+
+			"Coordinates of the stadiums\n"+
 			"";
             HelpDialog helpdialog = new HelpDialog(s);
             helpdialog.setVisible(true);
@@ -210,7 +210,7 @@ public class sanDiegoStadium extends JFrame{
 	    else if(arg == "Contact us") {
 		  try {
 	        String s = "\n\n\n\n     Any enquiries should be addressed to " +
-	        "\n\n\n                  dddd@sdsu.edu";
+	        "\n\n\n                  brianraf@uw.edu";
             HelpDialog helpdialog = new HelpDialog(s);
             helpdialog.setVisible(true);
           } catch(IOException e){}
